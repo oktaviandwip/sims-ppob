@@ -42,8 +42,16 @@ controllers.newTransaction = async (req, res) => {
 controllers.getTransaction = async (req, res) => {
   try {
     const { offset, limit } = req.query;
+
+    if (limit) {
+      offset = parseInt(offset);
+      limit = parseInt(limit);
+    }
+
     const result = await models.getTransaction(req.token.email, offset, limit);
-    const data = limit ? { offset, limit, records: result } : result;
+    const data = limit
+      ? { offset: parseInt(offset), limit, records: result }
+      : result;
     return response(res, 0, "Get History Berhasil", data);
   } catch (err) {
     return response(res, 103, err.message);
