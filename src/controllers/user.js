@@ -1,7 +1,7 @@
 const controllers = {};
 const models = require("../models/user");
 const response = require("../utils/response");
-const hashing = require("../utils/hash");
+const hashing = require("../utils/auth");
 
 // Get Profile
 controllers.getProfile = async (req, res) => {

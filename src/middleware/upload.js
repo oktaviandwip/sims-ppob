@@ -1,6 +1,6 @@
 const upload = {};
-const { multer, storage, fileFilter } = require("../configs/multer");
 const cloudinary = require("../configs/cloudinary");
+const { multer, storage, fileFilter } = require("../configs/multer");
 
 // Multer
 upload.multer = multer({

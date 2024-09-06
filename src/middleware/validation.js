@@ -6,7 +6,9 @@ const { body, validationResult } = require("express-validator");
 // Registration
 validation.emailPassword = [
   body("email").isEmail().withMessage("Parameter email tidak sesuai format"),
-  body("password").isLength({ min: 8 }).withMessage("Password min. 8 karakter"),
+  body("password")
+    .isLength({ min: 8 })
+    .withMessage("Parameter password min. 8 karakter"),
   (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
