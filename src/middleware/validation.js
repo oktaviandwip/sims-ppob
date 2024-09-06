@@ -22,13 +22,13 @@ validation.emailPassword = [
 validation.login = (req, res, next) => {
   const { authorization } = req.headers;
   if (!authorization) {
-    return response(res, 102, "Silahkan login terlebih dahulu");
+    return response(res, 103, "Silahkan login terlebih dahulu");
   }
 
   const token = authorization.replace("Bearer ", "");
   jwt.verify(token, process.env.JWT_KEY, (err, decode) => {
     if (err) {
-      return response(res, 102, "Token tidak valid atau kadaluwarsa");
+      return response(res, 108, "Token tidak valid atau kadaluwarsa");
     }
 
     req.token = decode;
