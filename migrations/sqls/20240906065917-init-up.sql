@@ -17,7 +17,7 @@ CREATE TABLE services (
 	service_name VARCHAR(255) NOT NULL,
 	service_icon TEXT NOT NULL,
 	description VARCHAR(255) NOT NULL,
-	service_tariff INT NOT NULL,
+	service_tariff INT,
 	created_on TIMESTAMP DEFAULT NOW(),
 	updated_on TIMESTAMP
 );
@@ -37,7 +37,7 @@ CREATE TABLE transactions (
 	service_code VARCHAR(255) REFERENCES services(service_code),
 	invoice_number VARCHAR(255) UNIQUE NOT NULL,
 	transaction_type VARCHAR(255) NOT NULL,
-	total_amount INT,
+	total_amount INT NOT NULL,
 	created_on TIMESTAMP DEFAULT NOW(),
 	updated_on TIMESTAMP
 );
