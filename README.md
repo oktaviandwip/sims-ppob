@@ -11,7 +11,7 @@
 <b>1. Clone the repository</b>
 
 ```bash
-git clone https://github.com/oktaviandwip/tickitz-backend
+git clone https://github.com/oktaviandwip/sims-ppob
 ```
 
 <b>2. Install dependencies</b>
