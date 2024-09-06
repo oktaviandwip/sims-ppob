@@ -39,6 +39,7 @@ npm start
 ## 🤝 Contributing
 
 <b>1. Fork the project</b>
+
 <b>2. Create your feature branch</b>
 
 ```bash
