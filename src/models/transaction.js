@@ -18,9 +18,9 @@ models.topup = async (email, total_amount) => {
 
     // Insert the top-up transaction
     await db.query(
-      `INSERT INTO transactions (email, invoice_number, transaction_type, total_amount) 
-       VALUES ($1, $2, $3, $4)`,
-      [email, invoiceNum, "TOPUP", total_amount]
+      `INSERT INTO transactions (email, invoice_number, service_code, transaction_type, total_amount) 
+       VALUES ($1, $2, $3, $4, $5)`,
+      [email, invoiceNum, "TOPUP", "TOPUP", total_amount]
     );
 
     // Calculate the balance

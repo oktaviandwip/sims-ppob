@@ -37,12 +37,13 @@ CREATE TABLE transactions (
 	service_code VARCHAR(255) REFERENCES services(service_code),
 	invoice_number VARCHAR(255) UNIQUE NOT NULL,
 	transaction_type VARCHAR(255) NOT NULL,
-	total_amount INT NOT NULL,
+	total_amount INT,
 	created_on TIMESTAMP DEFAULT NOW(),
 	updated_on TIMESTAMP
 );
 
 INSERT INTO services(service_code, service_name, service_icon, description, service_tariff) VALUES
+('TOPUP', 'TOPUP', 'https://nutech-integrasi.app/dummy.jpg', 'Top Up balance', null),
 ('PAJAK', 'Pajak PBB', 'https://nutech-integrasi.app/dummy.jpg', 'Pajak PBB', 40000),
 ('PLN', 'Listrik', 'https://nutech-integrasi.app/dummy.jpg', 'Pajak PBB', 10000),
 ('PDAM', 'PDAM Berlangganan', 'https://nutech-integrasi.app/dummy.jpg', 'PDAM Berlangganan', 40000),
