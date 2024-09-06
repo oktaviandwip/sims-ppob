@@ -1,7 +1,7 @@
 const models = {};
 const db = require("../configs/db");
 
-// Get Banner
+// Get banner
 models.getBanner = async () => {
   const result = await db.query(
     `SELECT banner_name, banner_image, description FROM banner`
@@ -9,7 +9,7 @@ models.getBanner = async () => {
   return result.rows;
 };
 
-// Get Services
+// Get services
 models.getServices = async () => {
   const result = await db.query(
     `SELECT service_code, service_name, service_icon, service_tariff FROM services`

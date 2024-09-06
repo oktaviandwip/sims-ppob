@@ -2,12 +2,12 @@ const models = {};
 const db = require("../configs/db");
 const { genInvoiceNumber, calculateBalance } = require("../utils/transaction");
 
-// Get Balance
+// Get balance
 models.getBalance = async (email) => {
   return await calculateBalance(email);
 };
 
-// Top Up
+// Top up
 models.topUp = async (email, total_amount) => {
   try {
     // Generate invoice number
@@ -38,7 +38,7 @@ models.topUp = async (email, total_amount) => {
   }
 };
 
-// New Transaction
+// New transaction
 models.newTransaction = async (email, service_code) => {
   try {
     // Generate invoice number
@@ -96,13 +96,13 @@ models.newTransaction = async (email, service_code) => {
   }
 };
 
-// Get Transaction
+// Get transaction history
 models.getTransaction = async (email, offset, limit) => {
   try {
     let query = `
       SELECT invoice_number, transaction_type, description, total_amount, t.created_on
       FROM transactions t
-      LEFT JOIN services s ON t.service_code = s.service_code
+      JOIN services s ON t.service_code = s.service_code
       WHERE email = $1
       ORDER BY created_on DESC
     `;

@@ -15,7 +15,7 @@ models.getPassByEmail = (email) => {
   return db.query(`SELECT * FROM users WHERE email = $1`, [email]);
 };
 
-// Get Profile
+// Get profile
 models.getProfile = async (email) => {
   const result = await db.query(
     `SELECT email, first_name, last_name, profile_image FROM users WHERE email = $1`,
@@ -24,7 +24,7 @@ models.getProfile = async (email) => {
   return result.rows[0];
 };
 
-// Update Profile
+// Update profile
 models.updateProfile = async (
   { password, first_name, last_name, profile_image },
   email

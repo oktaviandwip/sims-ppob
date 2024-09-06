@@ -2,7 +2,7 @@ const controllers = {};
 const models = require("../models/transaction");
 const response = require("../utils/response");
 
-// Get Balance
+// Get balance
 controllers.getBalance = async (req, res) => {
   try {
     const result = await models.getBalance(req.token.email);
@@ -12,7 +12,7 @@ controllers.getBalance = async (req, res) => {
   }
 };
 
-// Top Up
+// Top up
 controllers.topUp = async (req, res) => {
   try {
     const result = await models.topUp(req.token.email, req.body.top_up_amount);
@@ -22,7 +22,7 @@ controllers.topUp = async (req, res) => {
   }
 };
 
-// New Transaction
+// New transaction
 controllers.newTransaction = async (req, res) => {
   try {
     const result = await models.newTransaction(
@@ -31,14 +31,14 @@ controllers.newTransaction = async (req, res) => {
     );
     return response(res, 0, "Transaksi berhasil", result);
   } catch (err) {
-    if (err.includes("Service" || "Balance")) {
+    if (err.message.includes("Service") || err.message.includes("Balance")) {
       return response(res, 102, err.message);
     }
     return response(res, 103, err.message);
   }
 };
 
-// Get Transaction
+// Get transaction history
 controllers.getTransaction = async (req, res) => {
   try {
     const { page, limit } = req.query;
