@@ -38,7 +38,7 @@ models.topUp = async (email, total_amount) => {
   }
 };
 
-// Post Transaction
+// New Transaction
 models.newTransaction = async (email, service_code) => {
   try {
     // Generate invoice number

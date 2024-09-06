@@ -31,6 +31,9 @@ controllers.newTransaction = async (req, res) => {
     );
     return response(res, 0, "Transaksi berhasil", result);
   } catch (err) {
+    if (err.includes("Service" || "Balance")) {
+      return response(res, 102, err.message);
+    }
     return response(res, 103, err.message);
   }
 };
