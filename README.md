@@ -4,7 +4,13 @@
 
 ## 📝 About the Project
 
-<b>Payment Point Online Bank (SIMS PPOB)</b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
+<b>Payment Point Online Bank (SIMS PPOB)</b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online. REST API yang dibuat memiliki modul:
+
+- Registrasi
+- Login
+- Cek Saldo
+- Top Up
+- Transaksi
 
 ## 🛠️ Installation Steps
 
