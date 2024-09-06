@@ -45,7 +45,7 @@ models.updateProfile = async (
     );
 
     if (result.rowCount === 0) {
-      return response(res, 404, "Email belum terdaftar");
+      throw new Error("Email belum terdaftar");
     }
     return result.rows[0];
   } catch (error) {

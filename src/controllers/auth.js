@@ -26,16 +26,16 @@ controllers.login = async (req, res) => {
   try {
     const result = await models.getPassByEmail(req.body.email);
     if (result.rowCount === 0) {
-      return response(res, 102, "Email tidak ditemukan");
+      return response(res, 102, "Email belum terdaftar");
     }
 
-    const { role, email } = result.rows[0];
+    const { email } = result.rows[0];
     const password = result.rows[0].password;
     const passwordUser = req.body.password;
     const check = await bcrypt.compare(passwordUser, password);
 
     if (check) {
-      const tokenJwt = token(role, email);
+      const tokenJwt = token(email);
       return response(res, 0, "Login Sukses", { token: tokenJwt });
     } else {
       return response(res, 102, "Password salah");
