@@ -41,15 +41,13 @@ controllers.newTransaction = async (req, res) => {
 // Get transaction history
 controllers.getTransaction = async (req, res) => {
   try {
-    const { page, limit } = req.query;
-
-    let offset = 0;
-    if (limit) {
-      offset = (page - 1) * limit;
-    }
-
+    const { offset, limit } = req.query;
     const result = await models.getTransaction(req.token.email, offset, limit);
-    return response(res, 0, "Get History Berhasil", result);
+    return response(res, 0, "Get History Berhasil", {
+      offset,
+      limit,
+      records: result,
+    });
   } catch (err) {
     return response(res, 103, err.message);
   }
