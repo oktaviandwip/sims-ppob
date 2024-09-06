@@ -4,7 +4,7 @@
 
 ## 📝 About the Project
 
-<b>Payment point online bank (PPOB)</b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
+<b>Sistem Informasi Manajemen SDPPI Payment Point Online Bank (SIMS PPOB)</b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
 
 ## 🛠️ Installation Steps
 
@@ -65,5 +65,3 @@ git push origin feature/new-feature
 [Express-url]: https://expressjs.com/
 [Postgresql]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
 [Postgresql-url]: https://www.postgresql.org/
-
-<hr>
