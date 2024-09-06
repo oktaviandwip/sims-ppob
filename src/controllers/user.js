@@ -20,9 +20,9 @@ controllers.updateProfile = async (req, res) => {
       req.body.password = await hashing(req.body.password);
     }
     const result = await models.updateProfile(req.body, req.token.email);
-    return response(res, 200, "Update Pofile berhasil", result);
+    return response(res, 0, "Update Pofile berhasil", result);
   } catch (err) {
-    return response(res, 500, err.message);
+    return response(res, 102, err.message);
   }
 };
 
