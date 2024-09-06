@@ -9,7 +9,7 @@ const transaction = require("../controllers/transaction");
 
 // Auth
 routers.post("/registration", validation.emailPassword, auth.registration);
-routers.post("/login", auth.login);
+routers.post("/login", validation.emailPassword, auth.login);
 
 // Profile
 routers.get("/profile", validation.login, user.getProfile);
