@@ -2,10 +2,10 @@
   "dev": {
       "driver": "pg",
       "user": {"ENV":"DB_USER"},
-      "password": {"ENV":"DB_PASSWORD"},
+      "password": {"ENV":"DB_PASS"},
       "host": {"ENV":"DB_HOST"},
       "database": {"ENV":"DB_NAME"},
-      "ssl": true,
-      "port": 5432
+      "port": {"ENV":"DB_PORT"}
+
     }
 }

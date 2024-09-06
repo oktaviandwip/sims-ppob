@@ -1,15 +1,10 @@
 <h1 align="center">
-  Backend With Nodejs
+  SIMS PPOB
 </h1>
 
-<p align="center"><img src="https://yt3.ggpht.com/ytc/AKedOLT7YD9x6PiR-CfbBbFC3wz2WatiIZFrI_I0v-6k=s900-c-k-c0x00ffffff-no-rj" width="400px" alt="Arkademylogo.svg" /></p>
+## 📝 About the Project
 
-<p align="center">
-    <a href="https://www.fazztrack.com/" target="blank">Our Website</a>
-    ·
-    <a href="https://www.fazztrack.com/class/fullstack-website-dan-golang">Join With Us</a>
-    ·
-</p>
+<b>Payment point online bank (PPOB)<b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
 
 ## 🛠️ Installation Steps
 
@@ -26,6 +21,7 @@ npm install
 # or
 yarn install
 ```
+
 3. Run the app
 
 ```bash
@@ -37,12 +33,12 @@ npm start
 ## 🤝 Contributing
 
 1. Fork the project
-   
 2. Create your feature branch
 
 ```bash
 git checkout -b feature/new-feature
 ```
+
 3. Commit your changes
 
 ```bash
@@ -58,10 +54,10 @@ git push origin feature/new-feature
 5. Open a pull request
 
 ## 💻 Built with
-    
--   [![Node.js][Node.js]][Node-url]
--   [![Express.js][Express.js]][Express-url]
--   [![PostgreSQL][PostgreSQL]][PostgreSQL-url]
+
+- [![Node.js][Node.js]][Node-url]
+- [![Express.js][Express.js]][Express-url]
+- [![PostgreSQL][PostgreSQL]][PostgreSQL-url]
 
 [Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [Node-url]: https://nodejs.org/en

@@ -4,5 +4,5 @@ WORKDIR /app
 COPY . /app
 RUN rm -rf node_modules && npm install
 
-EXPOSE 8000
+EXPOSE 8080
 CMD ["app.js"]
