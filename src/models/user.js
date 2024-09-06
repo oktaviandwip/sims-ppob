@@ -1,6 +1,15 @@
 const models = {};
 const db = require("../configs/db");
 
+// Registration
+models.registration = ({ email, first_name, last_name, password }) => {
+  return db.query(
+    `INSERT INTO users (email, first_name, last_name, password)
+     VALUES($1, $2, $3, $4)`,
+    [email, first_name, last_name, password]
+  );
+};
+
 // Login
 models.getPassByEmail = (email) => {
   return db.query(`SELECT * FROM users WHERE email = $1`, [email]);

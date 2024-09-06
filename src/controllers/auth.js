@@ -8,9 +8,7 @@ const token = require("../utils/token");
 // Registration
 controllers.registration = async (req, res) => {
   try {
-    if (req.body.password) {
-      req.body.password = await hashing(req.body.password);
-    }
+    req.body.password = await hashing(req.body.password);
     const result = await models.registration(req.body);
     if (result.rowCount === 1) {
       return response(res, 0, "Registrasi berhasil silahkan login");

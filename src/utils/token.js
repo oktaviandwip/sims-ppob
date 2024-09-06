@@ -3,11 +3,10 @@ const jwt = require("jsonwebtoken");
 
 const token = (role, email) => {
   const payload = {
-    role,
     email,
   };
 
-  const token = jwt.sign(payload, process.env.JWT_KEY, { expiresIn: "12h" });
+  const token = jwt.sign(payload, process.env.JWT_KEY, { expiresIn: "1m" });
   return token;
 };
 
