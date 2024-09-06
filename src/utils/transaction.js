@@ -24,7 +24,7 @@ transaction.calculateBalance = async (email) => {
        AS balance`,
     [email]
   );
-  return result.rows[0].balance;
+  return parseInt(result.rows[0].balance);
 };
 
 module.exports = transaction;
