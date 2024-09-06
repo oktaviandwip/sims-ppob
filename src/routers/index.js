@@ -24,7 +24,7 @@ routers.put(
 
 // Information
 routers.get("/banner", information.getBanner);
-routers.get("/services", information.getServices);
+routers.get("/services", validation.login, information.getServices);
 
 // Transaction
 routers.get("/balance", validation.login, transaction.getBalance);

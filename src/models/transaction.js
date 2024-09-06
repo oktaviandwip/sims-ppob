@@ -4,7 +4,7 @@ const { genInvoiceNumber, calculateBalance } = require("../utils/transaction");
 
 // Get Balance
 models.getBalance = async (email) => {
-  return (balance = await calculateBalance(email));
+  return await calculateBalance(email);
 };
 
 // Topup
