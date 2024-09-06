@@ -22,7 +22,7 @@ validation.emailPassword = [
 validation.login = (req, res, next) => {
   const { authorization } = req.headers;
   if (!authorization) {
-    return response(res, 103, "Silahkan login terlebih dahulu");
+    return response(res, 108, "Silahkan login terlebih dahulu");
   }
 
   const token = authorization.replace("Bearer ", "");
