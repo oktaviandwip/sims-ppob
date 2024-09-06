@@ -48,7 +48,9 @@ models.updateProfile = async (
       return response(res, 404, "Email belum terdaftar");
     }
     return result.rows[0];
-  } catch (error) {}
+  } catch (error) {
+    throw error;
+  }
 };
 
 module.exports = models;
