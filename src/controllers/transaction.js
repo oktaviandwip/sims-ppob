@@ -12,10 +12,10 @@ controllers.getBalance = async (req, res) => {
   }
 };
 
-// Topup
+// Top Up
 controllers.topUp = async (req, res) => {
   try {
-    const result = await models.topup(req.token.email, req.body.top_up_amount);
+    const result = await models.topUp(req.token.email, req.body.top_up_amount);
     return response(res, 0, "Top Up Balance berhasil", { balance: result });
   } catch (err) {
     return response(res, 103, err.message);

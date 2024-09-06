@@ -7,7 +7,7 @@ models.getBalance = async (email) => {
   return await calculateBalance(email);
 };
 
-// Topup
+// Top Up
 models.topUp = async (email, total_amount) => {
   try {
     // Generate invoice number
