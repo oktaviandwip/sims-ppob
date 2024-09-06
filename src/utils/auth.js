@@ -20,7 +20,7 @@ auth.genToken = (email) => {
     email,
   };
 
-  const token = jwt.sign(payload, process.env.JWT_KEY, { expiresIn: "1m" });
+  const token = jwt.sign(payload, process.env.JWT_KEY, { expiresIn: "12h" });
   return token;
 };
 
