@@ -25,7 +25,7 @@ controllers.login = async (req, res) => {
   try {
     const result = await models.getPassByEmail(req.body.email);
     if (result.rowCount === 0) {
-      return response(res, 103, "Email belum terdaftar");
+      return response(res, 103, "Email atau password salah");
     }
 
     const { email } = result.rows[0];
@@ -37,7 +37,7 @@ controllers.login = async (req, res) => {
       const tokenJwt = auth.genToken(email);
       return response(res, 0, "Login Sukses", { token: tokenJwt });
     } else {
-      return response(res, 103, "Password salah");
+      return response(res, 103, "Email atau password salah");
     }
   } catch (error) {
     return response(res, 103, error.message);

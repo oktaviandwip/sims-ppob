@@ -7,9 +7,9 @@ const hashing = require("../utils/auth");
 controllers.getProfile = async (req, res) => {
   try {
     const result = await models.getProfile(req.token.email);
-    return response(res, 200, "Sukses", result);
+    return response(res, 0, "Sukses", result);
   } catch (err) {
-    return response(res, 500, err.message);
+    return response(res, 103, err.message);
   }
 };
 
@@ -22,7 +22,7 @@ controllers.updateProfile = async (req, res) => {
     const result = await models.updateProfile(req.body, req.token.email);
     return response(res, 0, "Update Pofile berhasil", result);
   } catch (err) {
-    return response(res, 102, err.message);
+    return response(res, 103, err.message);
   }
 };
 
