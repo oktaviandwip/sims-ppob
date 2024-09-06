@@ -1,5 +1,5 @@
 <h1 align="center">
-  SIMS PPOB BackendWith Nodejs
+  SIMS PPOB Backend with Nodejs
 </h1>
 
 ## 📝 About the Project
@@ -8,13 +8,13 @@
 
 ## 🛠️ Installation Steps
 
-1. Clone the repository
+<b>1. Clone the repository</b>
 
 ```bash
 git clone https://github.com/oktaviandwip/tickitz-backend
 ```
 
-2. Install dependencies
+<b>2. Install dependencies</b>
 
 ```bash
 npm install
@@ -22,7 +22,7 @@ npm install
 yarn install
 ```
 
-3. Run the app
+<b>3. Run the app</b>
 
 ```bash
 npm start
@@ -32,26 +32,26 @@ npm start
 
 ## 🤝 Contributing
 
-1. Fork the project
-2. Create your feature branch
+<b>1. Fork the project</b>
+<b>2. Create your feature branch</b>
 
 ```bash
 git checkout -b feature/new-feature
 ```
 
-3. Commit your changes
+<b>3. Commit your changes</b>
 
 ```bash
 git commit -m 'Add new feature'
 ```
 
-4. Push to the branch
+<b>4. Push to the branch</b>
 
 ```bash
 git push origin feature/new-feature
 ```
 
-5. Open a pull request
+<b>5. Open a pull request</b>
 
 ## 💻 Built with
 
@@ -65,8 +65,3 @@ git push origin feature/new-feature
 [Express-url]: https://expressjs.com/
 [Postgresql]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
 [Postgresql-url]: https://www.postgresql.org/
-
-<hr>
-<p align="center">
-Developed with ❤️ in Indonesia 	🇮🇩
-</p>
