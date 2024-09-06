@@ -1,11 +1,10 @@
 <h1 align="center">
-  <p>SIMS PPOB Backend</p>
-  <p>with Nodejs</p>
+  PPOB Backend with Nodejs
 </h1>
 
 ## 📝 About the Project
 
-<b>Sistem Informasi Manajemen SDPPI Payment Point Online Bank (SIMS PPOB)</b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
+<b>Payment Point Online Bank (SIMS PPOB)</b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
 
 ## 🛠️ Installation Steps
 
