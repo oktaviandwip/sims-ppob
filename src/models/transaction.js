@@ -8,7 +8,7 @@ models.getBalance = async (email) => {
 };
 
 // Topup
-models.topup = async (email, total_amount) => {
+models.topUp = async (email, total_amount) => {
   try {
     // Generate invoice number
     const invoiceNum = genInvoiceNumber();

@@ -8,17 +8,17 @@ controllers.getBalance = async (req, res) => {
     const result = await models.getBalance(req.token.email);
     return response(res, 0, "Get Balance Berhasil", { balance: result });
   } catch (err) {
-    return response(res, 102, err.message);
+    return response(res, 103, err.message);
   }
 };
 
 // Topup
-controllers.topup = async (req, res) => {
+controllers.topUp = async (req, res) => {
   try {
     const result = await models.topup(req.token.email, req.body.top_up_amount);
     return response(res, 0, "Top Up Balance berhasil", { balance: result });
   } catch (err) {
-    return response(res, 102, err.message);
+    return response(res, 103, err.message);
   }
 };
 
@@ -31,7 +31,7 @@ controllers.newTransaction = async (req, res) => {
     );
     return response(res, 0, "Transaksi berhasil", result);
   } catch (err) {
-    return response(res, 102, err.message);
+    return response(res, 103, err.message);
   }
 };
 
@@ -48,7 +48,7 @@ controllers.getTransaction = async (req, res) => {
     const result = await models.getTransaction(req.token.email, offset, limit);
     return response(res, 0, "Get History Berhasil", result);
   } catch (err) {
-    return response(res, 102, err.message);
+    return response(res, 103, err.message);
   }
 };
 

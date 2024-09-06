@@ -37,7 +37,7 @@ validation.login = (req, res, next) => {
 };
 
 // Topup
-validation.topup = [
+validation.topUpAmount = [
   body("top_up_amount")
     .isInt({ min: 0 })
     .withMessage(

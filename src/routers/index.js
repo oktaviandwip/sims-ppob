@@ -28,7 +28,12 @@ routers.get("/services", information.getServices);
 
 // Transaction
 routers.get("/balance", validation.login, transaction.getBalance);
-routers.post("/topup", validation.login, validation.topup, transaction.topup);
+routers.post(
+  "/topup",
+  validation.login,
+  validation.topUpAmount,
+  transaction.topUp
+);
 routers.post("/transaction", validation.login, transaction.newTransaction);
 routers.get(
   "/transaction/history",
