@@ -1,11 +1,11 @@
 const express = require("express");
 const routers = express.Router();
-const information = require("../controllers/information");
-const transaction = require("../controllers/transaction");
-const auth = require("../controllers/auth");
-const user = require("../controllers/user");
 const validation = require("../middleware/validation");
 const upload = require("../middleware/upload");
+const auth = require("../controllers/auth");
+const user = require("../controllers/user");
+const information = require("../controllers/information");
+const transaction = require("../controllers/transaction");
 
 // Auth
 routers.post("/registration", validation.emailPassword, auth.registration);

@@ -2,7 +2,7 @@ const transaction = {};
 const db = require("../configs/db");
 
 // Generate invoice number
-transaction.generateInvoiceNumber = () => {
+transaction.genInvoiceNumber = () => {
   const date = new Date();
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");

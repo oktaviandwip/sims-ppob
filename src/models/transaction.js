@@ -1,9 +1,6 @@
 const models = {};
 const db = require("../configs/db");
-const {
-  generateInvoiceNumber,
-  calculateBalance,
-} = require("../utils/transaction");
+const { genInvoiceNumber, calculateBalance } = require("../utils/transaction");
 
 // Get Balance
 models.getBalance = async (email) => {
@@ -14,7 +11,7 @@ models.getBalance = async (email) => {
 models.topup = async (email, total_amount) => {
   try {
     // Generate invoice number
-    const invoiceNum = generateInvoiceNumber();
+    const invoiceNum = genInvoiceNumber();
 
     // Start a transaction
     await db.query("BEGIN");
@@ -45,7 +42,7 @@ models.topup = async (email, total_amount) => {
 models.newTransaction = async (email, service_code) => {
   try {
     // Generate invoice number
-    const invoiceNum = generateInvoiceNumber();
+    const invoiceNum = genInvoiceNumber();
 
     // Start a transaction
     await db.query("BEGIN");

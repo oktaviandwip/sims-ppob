@@ -1,7 +1,7 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-const token = (role, email) => {
+const genToken = (email) => {
   const payload = {
     email,
   };
@@ -10,4 +10,4 @@ const token = (role, email) => {
   return token;
 };
 
-module.exports = token;
+module.exports = genToken;
