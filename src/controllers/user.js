@@ -3,7 +3,7 @@ const models = require("../models/user");
 const response = require("../utils/response");
 const hashing = require("../utils/auth");
 
-// Get Profile
+// Get profile
 controllers.getProfile = async (req, res) => {
   try {
     const result = await models.getProfile(req.token.email);
@@ -13,7 +13,7 @@ controllers.getProfile = async (req, res) => {
   }
 };
 
-// Update Profile
+// Update profile
 controllers.updateProfile = async (req, res) => {
   try {
     if (req.body.password) {

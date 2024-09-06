@@ -16,7 +16,7 @@ CREATE TABLE services (
 	service_code VARCHAR(255) UNIQUE NOT NULL,
 	service_name VARCHAR(255) NOT NULL,
 	service_icon TEXT NOT NULL,
-	description VARCHAR(255) NOT NULL,
+	description TEXT NOT NULL,
 	service_tariff INT,
 	created_on TIMESTAMP DEFAULT NOW(),
 	updated_on TIMESTAMP
@@ -26,7 +26,7 @@ CREATE TABLE banner (
 	id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
 	banner_name VARCHAR(255) NOT NULL,
 	banner_image TEXT NOT NULL,
-	description VARCHAR(255) NOT NULL,
+	description TEXT NOT NULL,
 	created_on TIMESTAMP DEFAULT NOW(),
 	updated_on TIMESTAMP
 );
