@@ -43,10 +43,6 @@ models.updateProfile = async (
        `,
       [password, first_name, last_name, profile_image, email]
     );
-
-    if (result.rowCount === 0) {
-      throw new Error("Email belum terdaftar");
-    }
     return result.rows[0];
   } catch (error) {
     throw error;
