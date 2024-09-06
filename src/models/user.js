@@ -1,0 +1,45 @@
+const models = {};
+const db = require("../configs/db");
+
+// Login
+models.getPassByEmail = (email) => {
+  return db.query(`SELECT * FROM users WHERE email = $1`, [email]);
+};
+
+// Get Profile
+models.getProfile = async (email) => {
+  const result = await db.query(
+    `SELECT email, first_name, last_name, profile_image FROM users WHERE email = $1`,
+    [email]
+  );
+  return result.rows[0];
+};
+
+// Update Profile
+models.updateProfile = async (
+  { password, first_name, last_name, profile_image },
+  email
+) => {
+  try {
+    const result = await db.query(
+      `UPDATE users 
+       SET 
+        password = COALESCE(NULLIF($1, ''), password),
+        first_name = COALESCE(NULLIF($2, ''), first_name),
+        last_name = COALESCE(NULLIF($3, ''), last_name),
+        profile_image = COALESCE(NULLIF($4, ''), profile_image), 
+        updated_on = NOW()
+       WHERE email = $5
+       RETURNING email, first_name, last_name, profile_image
+       `,
+      [password, first_name, last_name, profile_image, email]
+    );
+
+    if (result.rowCount === 0) {
+      return response(res, 404, "Email belum terdaftar");
+    }
+    return result.rows[0];
+  } catch (error) {}
+};
+
+module.exports = models;
