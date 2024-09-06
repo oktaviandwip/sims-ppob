@@ -1,10 +1,10 @@
 <h1 align="center">
-  SIMS PPOB
+  SIMS PPOB BackendWith Nodejs
 </h1>
 
 ## 📝 About the Project
 
-<b>Payment point online bank (PPOB)<b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
+<b>Payment point online bank (PPOB)</b> merupakan sistem pembayaran tagihan dan pembelian produk seperti pulsa, paket data, token listrik, voucher elektronik, dan sebagainya secara online.
 
 ## 🛠️ Installation Steps
 
